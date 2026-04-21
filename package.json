@@ -1,0 +1,57 @@
+{
+  "name": "backend-phase1",
+  "version": "1.0.0",
+  "description": "Learning backend",
+  "main": "server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "cross-env NODE_ENV=development tsx --watch src/server.ts",
+    "prestart": "npm run build",
+    "start": "cross-env NODE_ENV=production node dist/server.js",
+    "prestaging": "npm run build",
+    "staging": "cross-env NODE_ENV=staging node dist/server.js",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "echo \"Error no test script found\" && exit 1",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThingsIBuild/backend-phase1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThingsIBuild/backend-phase1/issues"
+  },
+  "homepage": "https://github.com/ThingsIBuild/backend-phase1#readme",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.7.0",
+    "argon2": "^0.44.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "morgan": "^1.10.1",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@prisma/client": "^7.7.0",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.6.0",
+    "@types/pg": "^8.20.0",
+    "cross-env": "^10.1.0",
+    "eslint": "^10.2.1",
+    "eslint-plugin-perfectionist": "^5.9.0",
+    "prettier": "^3.8.3",
+    "prisma": "^7.7.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.58.2"
+  }
+}

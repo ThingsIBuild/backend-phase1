@@ -1,0 +1,5 @@
+{
+    "editor.formatOnSave": true,
+"js/ts.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative"
+}
